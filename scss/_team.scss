@@ -1,0 +1,113 @@
+.team {
+  padding: 5.8% 30px 6.5%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & + & {
+      margin-left: 30px;
+    }
+  }
+  &__images {
+    display: flex;
+  }
+  &__image-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: box-shadow 0.3s, top 0.3s, left 0.3s;
+    &:hover {
+      box-shadow: 10px 10px 0 0 #95e1d3;
+      top: -10px;
+      left: -10px;
+      .team__image-hover {
+        opacity: 1;
+      }
+    }
+  }
+  &__image {
+    position: relative;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  &__image-hover {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: opacity 0.3s;
+    background-image: linear-gradient(
+      0deg,
+      rgba(252, 227, 138, 0.89) 0%,
+      rgba(243, 129, 129, 0.89) 100%
+    );
+    a {
+      background-color: #fce38a;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s;
+      &:hover {
+        background-color: #f38181;
+        img {
+          filter: brightness(200%);
+        }
+      }
+    }
+    img {
+      filter: brightness(100%);
+      transition: filter 0.3s;
+    }
+  }
+  &__name {
+    font-family: Montserrat;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #333333;
+    margin: 30px 0 5px;
+  }
+  &__profession {
+    font-family: Roboto;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 300;
+    font-style: italic;
+    color: #999999;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 960px) {
+  .team {
+    &__block {
+      & + & {
+        margin-left: 0px;
+      }
+    }
+    &__images {
+      flex-direction: column;
+      &__image {
+      }
+    }
+    &__name {
+      margin: 15px 0 5px;
+    }
+  }
+}

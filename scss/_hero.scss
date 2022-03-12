@@ -1,0 +1,97 @@
+.hero,
+.slide,
+.swiper-wrapper {
+  max-height: calc(min(100vh, 180vw));
+}
+.slide-1,
+.slide-2,
+.slide-3,
+.slide-4 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+      0deg,
+      rgba(252, 227, 138, 0.89) 0%,
+      rgba(243, 129, 129, 0.89) 100%
+    ),
+    url("../images/background.jpg") center/cover no-repeat;
+  &__subtitle {
+    font-family: "Kaushan Script";
+    font-size: calc(min(7.25vh, 7.25vw));
+    line-height: 1.2;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: calc(min(4.25vh, 4.25vw));
+  }
+  &__title {
+    word-wrap: normal;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: calc(min(15.1vh, 15.1vw));
+    line-height: calc(min(14.09vh, 14.09vw));
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: calc(min(8.4vh, 8.4vw));
+    position: relative;
+    &:after {
+      position: absolute;
+      bottom: calc(max(-3.2vh, -3.2vw));
+      left: 50%;
+      transform: translateX(-50%);
+      content: "";
+      width: 60px;
+      height: 3px;
+      background-color: #fff;
+    }
+  }
+  &__button {
+    width: 160px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 3px solid #fff;
+    font-family: Montserrat;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    &:hover,
+    &:focus {
+      background-color: #fff;
+      color: rgb(252, 227, 138);
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.slide-2 {
+}
+.slide-3 {
+}
+.slide-4 {
+}
+
+@media (min-width: 1920px) {
+  .slide-1,
+  .slide-2,
+  .slide-3,
+  .slide-4 {
+    &__subtitle {
+      font-size: 72px;
+      margin-bottom: 42px;
+    }
+    &__title {
+      font-size: 150px;
+      line-height: 140px;
+      margin-bottom: 124px;
+    }
+  }
+}

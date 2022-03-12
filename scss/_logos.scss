@@ -1,0 +1,18 @@
+.logos {
+  padding: 50px 30px;
+  background-color: #f8f8f8;
+  &__image {
+    margin: 0 auto;
+    max-width: 1212px;
+    img {
+      max-width: 100%;
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .logos {
+    padding: 20px;
+  }
+}

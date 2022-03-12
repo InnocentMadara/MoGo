@@ -1,0 +1,24 @@
+.design {
+  padding: 5.8% 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url(../images/design/background.jpg) center/cover no-repeat;
+  &__title {
+    text-align: center;
+  }
+  &__image-block {
+    position: relative;
+    left: -1%;
+  }
+  &__image-tablet {
+    max-width: 80%;
+  }
+  &__image-phone {
+    max-width: 40%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateY(12%);
+  }
+}

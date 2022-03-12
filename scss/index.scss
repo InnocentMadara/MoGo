@@ -1,0 +1,75 @@
+@import "./normalize";
+@import "./slider";
+@import "./header";
+@import "./hero";
+@import "./about";
+@import "./facts";
+@import "./services";
+@import "./design";
+@import "./activities";
+@import "./quotes";
+@import "./team";
+@import "./logos";
+@import "./work";
+@import "./testimonials";
+@import "./reviews";
+@import "./stories";
+@import "./map";
+@import "./footer";
+
+body {
+  background: #363636;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.title {
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #333333;
+  margin-bottom: 90px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+  }
+}
+.subtitle {
+  font-family: "Kaushan Script";
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #333333;
+  margin-bottom: 23px;
+}
+.text {
+  margin: 30px;
+  max-width: 960px;
+  font-family: Roboto;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #999999;
+  text-align: center;
+  margin-bottom: 101px;
+}

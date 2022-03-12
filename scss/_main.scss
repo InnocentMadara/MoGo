@@ -1,0 +1,116 @@
+.slider,
+.slide,
+.swiper-wrapper {
+  max-height: 100vh;
+}
+.slide-1,
+.slide-2,
+.slide-3,
+.slide-4 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+      0deg,
+      rgba(252, 227, 138, 0.89) 0%,
+      rgba(243, 129, 129, 0.89) 100%
+    ),
+    url("../images/background.jpg") center/cover no-repeat;
+  &__subtitle {
+    font-family: "Kaushan Script";
+    font-size: 7.25vh;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 42px;
+  }
+  &__title {
+    word-wrap: normal;
+    max-width: 800px;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 15.1vh;
+    line-height: 14.09vh;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 124px;
+    position: relative;
+    &:after {
+      position: absolute;
+      bottom: -47px;
+      left: 50%;
+      transform: translateX(-50%);
+      content: "";
+      width: 60px;
+      height: 3px;
+      background-color: #fff;
+    }
+  }
+  &__button {
+    width: 160px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 3px solid #fff;
+    font-family: Montserrat;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    &:hover,
+    &:focus {
+      background-color: #fff;
+      color: rgb(252, 227, 138);
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.slide-2 {
+}
+.slide-3 {
+}
+.slide-4 {
+}
+.swiper-pagination-bullet-inner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  height: 70px;
+  font-family: Montserrat;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #fff;
+  margin-top: 6px;
+  & > span {
+    margin-top: -6px;
+    font-size: 24px;
+    font-weight: 700;
+    margin-right: 7px;
+  }
+}
+@media (min-width: 1921) {
+  .slide-1,
+  .slide-2,
+  .slide-3,
+  .slide-4 {
+    &__subtitle {
+      font-size: 72px;
+    }
+    &__title {
+      font-size: 150px;
+      line-height: 140px;
+    }
+  }
+}

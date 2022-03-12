@@ -1,0 +1,51 @@
+.map {
+  background: url("../images/map/background.jpg") center/auto 100% no-repeat;
+  transition: background-size 0.3s;
+  &:hover {
+    background-size: auto 200%;
+    .map__hover {
+      opacity: 1;
+    }
+  }
+  &__link {
+    text-decoration: none;
+  }
+  &__hover {
+    opacity: 0;
+    transition: opacity 0.3s;
+    padding: 57px 30px;
+    background: rgba(255, 255, 255, 0.85);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & > * {
+      margin-bottom: 18px;
+    }
+  }
+  &__image {
+    img {
+    }
+  }
+  &__text {
+    position: relative;
+
+    font-family: Montserrat;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #f38181;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -18px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 3px;
+      width: 60px;
+      background-color: #f38181;
+      max-width: 100%;
+    }
+  }
+}
